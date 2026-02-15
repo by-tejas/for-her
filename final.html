@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For Someone Special</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Dark overlay for readability */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
+/* Floating Hearts */
+.heart {
+  position: fixed;
+  bottom: -50px;
+  color: rgba(255,255,255,0.2);
+  font-size: 20px;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.2s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h1 {
+  font-weight: normal;
+  margin-bottom: 30px;
+  font-size: 42px;
+}
+
+p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 15px;
+  transition: 0.3s;
+}
+
+.yes {
+  background-color: #d4af37;
+  color: white;
+}
+
+.no {
+  background-color: rgba(255,255,255,0.3);
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.final-message {
+  font-size: 24px;
+  margin-top: 20px;
+  display: none;
+}
+
+.couple-photo {
+  width: 320px;
+  max-width: 90%;
+  border-radius: 20px;
+  margin-top: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.4s ease;
+}
+
+.couple-photo:hover {
+  transform: scale(1.03);
+}
+</style>
+</head>
+
+<body>
+
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="bargad.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const bgMusic = document.getElementById("bgMusic");
+bgMusic.volume = 0.45;
+
+document.addEventListener("click", function startMusic() {
+    bgMusic.play();
+    document.removeEventListener("click", startMusic);
+});
+</script>
+
+<!-- Floating Hearts Generator -->
+<script>
+for (let i = 0; i < 25; i++) {
+  let heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (8 + Math.random() * 10) + "s";
+  heart.style.fontSize = (15 + Math.random() * 20) + "px";
+  document.body.appendChild(heart);
+}
+</script>
+
+<section>
+<h1>I didn’t expect much when we first started talking.</h1>
+<p>We matched over a month ago, on 25th December, 2025.<br><br>
+I didn’t expect much when we first started talking, but that changed as the days passed — especially after we switched to Instagram on 28th December.<br><br>
+I really liked talking to you… something I didn’t realize would slowly become a part of my daily routine.<br><br>
+Back then, I didn’t know these little, unexpected conversations would turn into the part of my day I look forward to the most.
+</p>
+</section>
+
+<section>
+<h1>Our First Date</h1>
+<p>New year. New beginnings.<br><br>
+We had our first date on 14th January, 2026 at Phoenix Marketcity, Kurla — and you were an hour late hehehe.<br><br>
+But I didn’t mind waiting. I was genuinely looking forward to meeting you, and that one hour was truly worth it. So worth it that I wouldn’t be able to put it into words even if I tried.<br><br>
+It wouldn’t be an understatement to say it was the best first date I’ve ever had. I hadn’t had that much fun in a while.<br><br>
+Thank you for letting me win in air hockey madam 😂 I’m very grateful for your sacrifice and kindness.<br><br>
+And the funniest part? I forgot to give you the gift I got you… but maybe someone wanted to give us a reason to meet again. So I definitely don’t mind hehe.
+</p>
+</section>
+
+<section>
+<h1>Our Second Date</h1>
+<p>Our second date at Bandra Mcd was a simple but genuinely fun one — the kind of date I feel is underrated.<br><br>
+We ate a little, talked a lot, got to know each other better, and just spent time together. What’s there not to like about that, right?<br><br>
+I witnessed your bargaining skills for the first time and I was genuinely impressed… kyuki mujhse toh nahi hoga definitely 💀.<br><br>
+Our little walk to the station after that was special. We held hands for the first time, and it honestly felt like a dream tbh.<br><br>
+I finally got to give you my gift — the jhumkas station pe — and your smile and happiness made the wait completely worth it. That’s a moment I’ll definitely remember 😁.
+</p>
+</section>
+
+<section>
+<h1>Our Third Date</h1>
+<p>Pehli baar churchgate tak kisi k liye aaya tha… and kyu nahi aaunga, tujhe jo milna tha and tere liye utna toh karunga hi.<br><br>
+It was my first time in Kala Ghoda, and my first time visiting the Kala Ghoda Festival. Kaafi crazy and creative art display tha — but mere liye best piece of art toh tu hi thi obviously (sorry had to say it hehe).<br><br>
+This was also the day I asked you to be my Valentine — something I did for the very first time in my life.<br><br>
+Thoda nervous toh tha, but somewhere I felt like you would like it. And tera reaction was better than anything I could have imagined.<br><br>
+It was truly worth everything and felt nothing short of a sweet dream. Definitely one of the best moments I’ve experienced in my life ❤️.<br><br>
+Uske liye thank you meri jaan 😘.
+</p>
+</section>
+
+<section>
+<h1>Our Fourth Date</h1>
+<p>Our first proper weekend day date.<br><br>
+We weren’t twinning… but somehow we were dressed so similarly, jaise humara ek mind connection ban gaya ho.<br><br>
+You looked heavenly that day. Swarg se aayi apsara jaisi.<br><br>
+It was also the first time we clicked pictures together hehe.<br><br>
+I still look at those pictures from time to time whenever I miss you 😘.
+<br><br>
+
+<img src="us.jpg" class="couple-photo">
+
+</p>
+</section>
+
+<section>
+<h1>Our Fifth Date</h1>
+<p>
+Another chill date — anna idli and long talks in the park.<br><br>
+Spending time together without anything fancy feels underrated.<br><br>
+The teddy drawing you made was really sweet. Tu toh hai hi cutieee!!<br><br>
+And your letter… you really do have great vision.
+</p>
+</section>
+
+<section>
+<h1>The Moments That Stayed With Me</h1>
+<p>Our daily chats.<br><br>
+Our occasional calls.<br><br>
+Our short dates.<br><br>
+Our little moments of banter, holding hands, hugging you and keeping you close.<br><br>
+These are some of the things I’ve really come to cherish in such a short time — something I would have never expected just a month ago.<br><br>
+Whenever I used to hear someone say, “She’s the one who adds colour to my life,” I would think maybe they were exaggerating.<br><br>
+But now I know… it’s completely TRUE.<br><br>
+You genuinely add colour to my life — something that would have felt dull and ordinary otherwise.<br><br>
+A short voice note or even a random picture from you can brighten my entire day.<br><br>
+Not getting a reply from you makes me a little sad.<br><br>
+Thinking about you at random moments during the day has somehow become an involuntary activity now 😂.<br><br>
+There’s so much more I feel, but words will never fully capture everything.<br><br>
+All I know is that I really care about you deeply.<br><br>
+And that’s why I don’t want this to just stay in the “almost” zone anymore.<br><br>
+I want to take this… take US… one step forward.<br><br>
+And give it a name — girlfriend and boyfriend — if you want it too.
+</p>
+</section>
+
+<section id="question">
+<h1>Before I ask you something important in person...</h1>
+<p>I need to know one thing.</p>
+
+<h1>Would you like to be my girlfriend?</h1>
+
+<button class="yes" onclick="sayYes()">Yes 🤍</button>
+<button class="no" onclick="moveNo(this)">Not yet</button>
+
+<div class="final-message" id="finalMessage">
+I have something to ask you... right now. 💛
+</div>
+</section>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+function revealSections() {
+  const triggerBottom = window.innerHeight * 0.8;
+
+  sections.forEach(section => {
+    const boxTop = section.getBoundingClientRect().top;
+    if (boxTop < triggerBottom) {
+      section.classList.add("show");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealSections);
+revealSections();
+
+function sayYes() {
+  document.getElementById("finalMessage").style.display = "block";
+}
+
+function moveNo(button) {
+  const x = Math.random() * (window.innerWidth - button.clientWidth);
+  const y = Math.random() * (window.innerHeight - button.clientHeight);
+  button.style.position = "absolute";
+  button.style.left = x + "px";
+  button.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
